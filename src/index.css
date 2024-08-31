@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background: linear-gradient(to bottom, white, #ebf8ff);
+  min-height: 100vh;
+  min-width: 100vw;
+  margin: 0;
+  font-family: sans-serif
+}
+
+@keyframes marquee {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+  
+  .animate-marquee {
+    display: flex;
+    animation: marquee 20s linear infinite;
+    /* Width should be set to twice the container's width */
+    width: 200%;
+  }
+  
+  .marquee-container {
+    overflow: hidden;
+    width: 600px; /* Adjust this width to control how far the text scrolls */
+    margin: 0 auto; /* Centers the marquee in the middle of the page */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px; /* Adjust the height as needed */
+  }
+  
