@@ -1,5 +1,8 @@
+import CardLayout from "./Card";
+
 function HomePage() {
   return (
+    <div className="flex-col justify-center">
       <div className="flex justify-center mt-16">
         <div className="w-full max-w-2xl p-8">
           <div className="mb-4 text-center">
@@ -18,7 +21,20 @@ function HomePage() {
             </button>
           </div>
         </div>
+
       </div>
+      <div className="flex items-center justify-center mt-40">
+        <div className="p-6 rounded-lg w-full max-w-2xl text-center">
+          <h2 className="text-lg text-gray-500 font-bold mb-4">THE PROBLEM WITH LEGACY RPF SOFTWARE</h2>
+          <p className="text-5xl font-bold">Responses overwhelming your team?</p>
+        </div>
+      </div>
+
+      {/* Card */}
+      <div className="flex items-center justify-center min-h-screen">
+        <CardLayout />
+      </div>
+    </div>
   );
 }
 
