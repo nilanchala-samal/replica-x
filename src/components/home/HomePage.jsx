@@ -23,7 +23,7 @@ function HomePage() {
         </div>
 
       </div>
-      <div className="flex items-center justify-center mt-40">
+      <div className="flex items-center justify-center mt-24">
         <div className="p-6 rounded-lg w-full max-w-2xl text-center">
           <h2 className="text-lg text-gray-500 font-bold mb-4">THE PROBLEM WITH LEGACY RPF SOFTWARE</h2>
           <p className="text-5xl font-bold">Responses overwhelming your team?</p>
@@ -31,7 +31,7 @@ function HomePage() {
       </div>
 
       {/* Card */}
-      <div className="flex items-center justify-center min-h-screen">
+      <div className="flex items-center justify-center p-4 sm:p-8">
         <CardLayout />
       </div>
     </div>

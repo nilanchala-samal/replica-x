@@ -79,3 +79,6 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
+
+// This is the navbar

@@ -5,10 +5,10 @@ import { FaHeartPulse } from "react-icons/fa6";
 
 function Card({ logo, title, description }) {
     return (
-        <div className="bg-white p-4 rounded-xl shadow-xl shadow-blue-200 flex flex-col items-center w-96 max-w-xs md:max-w-sm">
+        <div className="bg-white p-7 rounded-xl shadow-xl shadow-blue-200 flex flex-col w-96 max-w-xs md:max-w-sm">
             <div className="text-4xl mb-4">{logo}</div>
-            <h3 className="text-lg md:text-xl font-bold mb-2 text-center">{title}</h3>
-            <p className="text-gray-600 text-sm md:text-base text-center">{description}</p>
+            <h3 className="text-lg md:text-xl font-bold mb-2">{title}</h3>
+            <p className="text-gray-600 text-sm md:text-base">{description}</p>
         </div>
     );
 }
