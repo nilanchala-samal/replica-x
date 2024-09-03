@@ -21,7 +21,7 @@ Card.propTypes = {
 
 function CardLayout() {
     return (
-        <div className="flex flex-wrap gap-7 p-4 md:p-6 justify-center">
+        <div className="flex flex-wrap gap-7 p-2 justify-center">
             <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 flex justify-center">
                 <Card
                     logo={<PiClockClockwiseFill />}
@@ -47,4 +47,4 @@ function CardLayout() {
     );
 }
 
-export default CardLayout;
+export {CardLayout, Card};

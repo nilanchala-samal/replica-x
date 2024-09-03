@@ -1,4 +1,7 @@
-import CardLayout from "./Card";
+import { CardLayout, Card } from "./Card";
+import { MdStars } from "react-icons/md";
+import { FaAtlassian } from "react-icons/fa";
+import { FiCheckCircle } from "react-icons/fi";
 
 function HomePage() {
   return (
@@ -30,10 +33,39 @@ function HomePage() {
         </div>
       </div>
 
-      {/* Card */}
-      <div className="flex items-center justify-center p-4 sm:p-8">
+      {/* Card separate */}
+      <div className="flex items-center justify-center p-4 sm:p-8 mb-20">
         <CardLayout />
       </div>
+
+      {/* cards inside another card */}
+
+      <div className="p-4 md:p-6 lg:p-8 mx-auto bg-white shadow-md rounded-2xl max-w-screen-lg mb-20">
+        <div className="text-center mb-6">
+          <p className="font-bold text-gray-500 mb-4">PRIVATE AI AND SECURE DATA</p>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-2">What about security?</h2>
+          <p className="text-gray-600">With AutoRFP.ai, you own your data, it is not used to train AI models and the platform meets the most stringent compliance requirements</p>
+        </div>
+
+        <div className="flex flex-col sm:flex-row sm:space-x-4 space-y-4 sm:space-y-0">
+          <Card
+            logo={<MdStars />}
+            title="ISO 27001 Certified"
+            description="Meet your security team's requirements with an ISO 27001 certified platform."
+          />
+          <Card
+            logo={<FaAtlassian />}
+            title="Private AI With Azure"
+            description="Keep your data private with AI that doesn't train on your data, leveraging Microsoft Azure AI."
+          />
+          <Card
+            logo={<FiCheckCircle />}
+            title="GDPR Compliant"
+            description="Meet global compliance requirements with AutoRFP.ai's global privacy approach."
+          />
+        </div>
+      </div>
+
     </div>
   );
 }
