@@ -76,13 +76,6 @@ const SignupModal = ({ isOpen, closeModal }) => {
                             >
                                 Sign Up
                             </button>
-                            <button
-                                type="button"
-                                className="text-gray-500 hover:text-gray-700 transition duration-300"
-                                onClick={closeModal}
-                            >
-                                Cancel
-                            </button>
                         </div>
                     </form>
                 </div>
