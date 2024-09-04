@@ -65,7 +65,17 @@ const LoginModal = ({ isOpen, closeModal }) => {
                             >
                                 Login
                             </button>
+<<<<<<< HEAD
                             
+=======
+                            <button
+                                type="button"
+                                className="text-gray-500 hover:text-gray-700 transition duration-300"
+                                onClick={closeModal}
+                            >
+                                Cancel
+                            </button>
+>>>>>>> febe2402f9fc4b76194a0884ac2377f388281308
                         </div>
                     </form>
                 </div>
