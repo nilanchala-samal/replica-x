@@ -1,8 +1,18 @@
 import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
+import LoginModal from './LoginModal';
+import SignupModal from './SignupModal';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isSignupModalOpen, setIsSignupModalOpen] = useState(false);
+
+  const openModal = () => setIsModalOpen(true);
+  const closeModal = () => setIsModalOpen(false);
+
+  const openSignupModal = () => setIsSignupModalOpen(true);
+  const closeSignupModal = () => setIsSignupModalOpen(false);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -35,10 +45,12 @@ const Navbar = () => {
         </div>
 
         <div className="hidden lg:flex items-center space-x-4 mr-10 text-lg">
-          <a href="#" className="text-gray-500 hover:text-orange-500">Login</a>
-          <button className="bg-blue-500 text-white px-3 py-2 rounded-lg hover:bg-blue-600">
+          <button onClick={openModal} className="text-gray-500 hover:text-orange-500">Login</button>
+          <LoginModal isOpen={isModalOpen} closeModal={closeModal} />
+          <button onClick={openSignupModal} className="bg-blue-500 text-white px-3 py-2 rounded-lg hover:bg-blue-600">
             Sign Up
           </button>
+          <SignupModal isOpen={isSignupModalOpen} closeModal={closeSignupModal} />
         </div>
 
         <div className="flex lg:hidden">
@@ -67,10 +79,12 @@ const Navbar = () => {
         {/* Mobile Login Link and Button */}
         <div className={`lg:hidden ${isOpen ? 'block' : 'hidden'}`}>
           <div className="flex flex-col space-y-4 mt-4 items-center">
-            <a href="#" className="text-gray-500 hover:text-orange-500">Login</a>
-            <button className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
+            <button onClick={openModal} href="#" className="text-gray-500 hover:text-orange-500">Login</button>
+            <LoginModal isOpen={isModalOpen} closeModal={closeModal} />
+            <button onClick={openSignupModal} className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
               Sign Up
             </button>
+            <SignupModal isOpen={isSignupModalOpen} closeModal={closeSignupModal} />
           </div>
         </div>
       </div>
